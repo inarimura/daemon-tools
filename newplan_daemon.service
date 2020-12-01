@@ -1,0 +1,15 @@
+[Unit]
+Description=Decanter daemon
+After=docker.service
+BindsTo=docker.service
+ReloadPropagatedFrom=docker.service
+
+[Service]
+Type=simple
+User=
+WorkingDirectory=
+ExecStart=
+
+
+[Install]
+WantedBy=multi-user.target
