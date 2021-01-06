@@ -23,7 +23,7 @@ function check_install_service()
         if [ -f $FOLDER/test.exe ] 
                                               ## && [ -f $FOLDER/test.exe ]
         then
-            #寫入輸入路徑
+            #write folder
             sed -i "/WorkingDirectory=/s@=.*@=$FOLDER@" ./install.service
             sed -i "/ExecStart=/s@=.*@=$FOLDER/start.sh -f@" ./install.service
             FOLDER_USER=$(ls -l $FOLDER/start.sh | awk '{print $3}')
